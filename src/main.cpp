@@ -4,8 +4,12 @@
 //========================================================================
 int main( ){
     
-    int width = 1920;
-    int height = 1080;
+//    int width = 1920;
+//    int height = 1080;
+
+    
+    int width = 1024;
+    int height = 768;
     
 //    ofSetupOpenGL(width,height,OF_WINDOW);            // <-------- setup the GL context
 

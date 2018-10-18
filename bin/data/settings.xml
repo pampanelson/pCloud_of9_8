@@ -1,0 +1,10 @@
+<group>
+	<cloudtransform>0.5</cloudtransform>
+	<cloudscale>0.3</cloudscale>
+	<speed>0.02</speed>
+	<clouddark>0.6</clouddark>
+	<cloudlight>0.2</cloudlight>
+	<cloudcover>0.2</cloudcover>
+	<cloudalpha>8</cloudalpha>
+	<skytint>0.5</skytint>
+</group>

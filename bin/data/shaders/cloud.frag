@@ -17,34 +17,36 @@ precision highp float;
 
 
 // all changeble parameters ============================================
-// uniform float time;
+uniform float time;
 // //uniform vec2 mouse;
 // uniform vec2 resolution;
-// uniform float cloudtransform; // speed of cloud transforming 0.1 ~ 0.9 ,bigger more cloud
-// uniform float cloudscale;
-// uniform float speed;
-// uniform float clouddark;  // 0.3 ~ 0.6  bigger lighter 
-// uniform float cloudlight;
-// uniform float cloudcover;
-// uniform float cloudalpha;
-// uniform float skytint;
+uniform float width; // pass width as float but vec2 --------
+uniform float height; // pass height as float but ved2 ---------
+uniform float cloudtransform; // speed of cloud transforming 0.1 ~ 0.9 ,bigger more cloud
+uniform float cloudscale;
+uniform float speed;
+uniform float clouddark;  // 0.3 ~ 0.6  bigger lighter 
+uniform float cloudlight;
+uniform float cloudcover;
+uniform float cloudalpha;
+uniform float skytint;
 // uniform vec3 skycolour1; 
 // uniform vec3 skycolour2; 
 
 
 
 
-const float time = 10.0;
+// const float time = 10.0;
 //const vec2 mouse;
-const vec2 resolution = vec2(1920.0,1080.0);
-const float cloudtransform = 0.5; // speed of cloud transforming 0.1 ~ 0.9 ,bigger more cloud
-const float cloudscale = .3;
-const float speed = 0.02;
-const float clouddark = 0.6;  // 0.3 ~ 0.6  bigger lighter 
-const float cloudlight = 0.2;
-const float cloudcover = 0.2;
-const float cloudalpha = 8.0;
-const float skytint = 0.5;
+// const vec2 resolution = vec2(1920.0,1080.0);
+// const float cloudtransform = 0.5; // speed of cloud transforming 0.1 ~ 0.9 ,bigger more cloud
+// const float cloudscale = .3;
+// const float speed = 0.02;
+// const float clouddark = 0.6;  // 0.3 ~ 0.6  bigger lighter 
+// const float cloudlight = 0.2;
+// const float cloudcover = 0.2;
+// const float cloudalpha = 8.0;
+// const float skytint = 0.5;
 const vec3 skycolour1 = vec3(0.2, 0.4, 0.6);
 const vec3 skycolour2 = vec3(0.4, 0.7, 1.0);
 
@@ -87,6 +89,8 @@ float fbm(vec2 n) {
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord ) {
     float cloudscale = cloudscale;
+
+    vec2 resolution = vec2(width,height);
 
     vec2 p = fragCoord.xy / (resolution.xy);
 
